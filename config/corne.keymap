@@ -68,9 +68,9 @@
 // | CTRL | F11 | F12 | F13 | F14 | F15 |   | MOUSE  LT,DOWN,UP,RT  | MB1 | MB2 |
 //                    | ALT |     | SPC |   | ENT |     | GUI |
       bindings = <
-   &kp TAB    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4 &MB5
-   &bt BT_CLR &kp F6   &kp F7   &kp F8   &kp F9   &kp F10      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &MB3         &MB4
-   &kp LCTRL  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &MB1         &MB2
+   &kp TAB    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4 &mkp MB5
+   &bt BT_CLR &kp F6   &kp F7   &kp F8   &kp F9   &kp F10      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &mkp MB3     &mkp MB4
+   &kp LCTRL  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB1     &mkp MB2
                                 &kp LALT  &trans  &kp SPACE    &kp RET  &trans   &kp LGUI
       >;
     };
