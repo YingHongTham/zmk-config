@@ -36,13 +36,13 @@
     lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL  |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+// | SHFT |  6  |  7  |  8  |  9  |  0  |   | LFT | DWN |  UP | RGT |     |      |
+// | CTRL |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | ALT |     | SPC |   | ENT |     | GUI |
       bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp DEL
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+   &kp LSHFT  &kp N6       &kp N7       &kp N8       &kp N9       &kp N0         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp LCTRL  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                                     &kp LALT     &trans       &kp SPACE      &kp RET  &trans   &kp LGUI
       >;
     };
@@ -50,9 +50,9 @@
     raise_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
-// | SHFT |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | CTRL |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | SHFT |     |     |     |     |     |   |  -  |  =  |  ~  |  [  |  ]  |  `   |
+// | CTRL |     |     |     |     |     |   |  _  |  +  | "|" |  {  |  }  |  \   |
+//                    | ALT |     | SPC |   | ENT |     | GUI |
       bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp DEL
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
@@ -63,14 +63,14 @@
 
     tri_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL  |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+// |  TAB | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | BSPC |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | F11 | F12 | F13 | F14 | F15 |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     | CAPS |
 //                    | ALT |     | SPC |   | ENT |     | GUI |
       bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N1       &kp N1       &kp M         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp DEL
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+   &kp TAB    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &kp BSPC
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp F11 &kp F12 &kp F13 &kp F14 &kp F15 &trans
+   &kp LCTRL  &trans       &trans       &trans       &trans       &trans         &trans  &trans  &trans  &trans  &trans  &kp CAPSLOCK
                                     &kp LALT     &trans       &kp SPACE      &kp RET  &trans   &kp LGUI
       >;
     };
