@@ -55,23 +55,23 @@
 //                    | ALT |     | SPC |   | ENT |     | GUI |
       bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp DEL
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp TILDE &kp LBKT &kp RBKT &kp GRAVE
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp PIPE  &kp LBRC &kp RBRC &kp BSLH
                              &kp LALT &trans   &kp SPACE   &kp RET   &trans    &kp LGUI
       >;
     };
 
     tri_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | BSPC |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | F11 | F12 | F13 | F14 | F15 |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     | CAPS |
+// |  TAB | F1  | F2  | F3  | F4  | F5  |   | BT1 | BT2 | BT3 | BT4 | BT5 | MB5 |
+// | BTCLR| F6  | F7  | F8  | F9  | F10 |   | SCROLL LT,DOWN,UP,RT  | MB3 | MB4 |
+// | CTRL | F11 | F12 | F13 | F14 | F15 |   | MOUSE  LT,DOWN,UP,RT  | MB1 | MB2 |
 //                    | ALT |     | SPC |   | ENT |     | GUI |
       bindings = <
-   &kp TAB    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp F11 &kp F12 &kp F13 &kp F14 &kp F15 &trans
-   &kp LCTRL  &trans       &trans       &trans       &trans       &trans         &trans  &trans  &trans  &trans  &trans  &kp CAPSLOCK
-                                    &kp LALT     &trans       &kp SPACE      &kp RET  &trans   &kp LGUI
+   &kp TAB    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4 &MB5
+   &bt BT_CLR &kp F6   &kp F7   &kp F8   &kp F9   &kp F10      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &MB3         &MB4
+   &kp LCTRL  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &MB1         &MB2
+                                &kp LALT  &trans  &kp SPACE    &kp RET  &trans   &kp LGUI
       >;
     };
   };
