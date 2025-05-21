@@ -8,34 +8,31 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// for hold-tap (&mt)
-#include <dt-bindings/zmk/behaviors.h>
-
 // for mouse movements/click
 #include <dt-bindings/zmk/pointing.h>
 
 / {
   conditional_layers {
-    compatible = "zmk,conditional-layers,behavior-hold-tap";
+    compatible = "zmk,conditional-layers";
     tri_layer {
       if-layers = <1 2>;
       then-layer = <3>;
     };
   };
   keymap {
-    compatible = "zmk,keymap,behavior-hold-tap";
+    compatible = "zmk,keymap";
 
     default_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | ALT | LWR | SPC |   | ENT | RSE  | GUI |
+// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENT  |
+//                    | ALT | LWR | SPC |   | ESC | RSE  | GUI |
       bindings = <
-   &kp TAB       &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &mt LSHFT ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL     &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LALT &mo 1 &kp SPACE   &kp RET &mo 2 &kp LGUI
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ENT
+                  &kp LALT &mo 1 &kp SPACE   &kp ESC &mo 2 &kp LGUI
       >;
     };
 
@@ -44,12 +41,12 @@
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL  |
 // | SHFT |  6  |  7  |  8  |  9  |  0  |   | LFT | DWN |  UP | RGT |     |      |
 // | CTRL |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | ALT |     | SPC |   | ENT |     | GUI |
+//                    | ALT |     | SPC |   | ESC |     | GUI |
       bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp DEL
    &kp LSHFT  &kp N6       &kp N7       &kp N8       &kp N9       &kp N0         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
    &kp LCTRL  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LALT     &trans       &kp SPACE      &kp RET  &trans   &kp LGUI
+                                    &kp LALT     &trans       &kp SPACE      &kp ESC  &trans   &kp LGUI
       >;
     };
 
@@ -58,12 +55,12 @@
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
 // | SHFT |     |     |     |     |     |   |  -  |  =  |  ~  |  [  |  ]  |  `   |
 // | CTRL |     |     |     |     |     |   |  _  |  +  | "|" |  {  |  }  |  \   |
-//                    | ALT |     | SPC |   | ENT |     | GUI |
+//                    | ALT |     | SPC |   | ESC |     | GUI |
       bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp DEL
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp TILDE &kp LBKT &kp RBKT &kp GRAVE
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp PIPE  &kp LBRC &kp RBRC &kp BSLH
-                             &kp LALT &trans   &kp SPACE   &kp RET   &trans    &kp LGUI
+                             &kp LALT &trans   &kp SPACE   &kp ESC   &trans    &kp LGUI
       >;
     };
 
@@ -72,12 +69,12 @@
 // |  TAB | F1  | F2  | F3  | F4  | F5  |   | BT1 | BT2 | BT3 | BT4 | BT5 | MB5 |
 // | BTCLR| F6  | F7  | F8  | F9  | F10 |   | SCROLL LT,DOWN,UP,RT  | MB3 | MB4 |
 // | CTRL | F11 | F12 | F13 | F14 | F15 |   | MOUSE  LT,DOWN,UP,RT  | MB1 | MB2 |
-//                    | ALT |     | SPC |   | ENT |     | GUI |
+//                    | ALT |     | SPC |   | ESC |     | GUI |
       bindings = <
    &kp TAB    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4 &mkp MB5
    &bt BT_CLR &kp F6   &kp F7   &kp F8   &kp F9   &kp F10      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &mkp MB3     &mkp MB4
    &kp LCTRL  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB1     &mkp MB2
-                                &kp LALT  &trans  &kp SPACE    &kp RET  &trans   &kp LGUI
+                                &kp LALT  &trans  &kp SPACE    &kp ESC  &trans   &kp LGUI
       >;
     };
   };
