@@ -15,6 +15,10 @@
 	tapping-term-ms = <150>;
 };
 
+&lt {
+	tapping-term-ms = <150>;
+};
+
 / {
   conditional_layers {
     compatible = "zmk,conditional-layers";
@@ -47,24 +51,24 @@
 // | CTRL |     | LFT	| DWN	| UP  | RGT |   |     |     |     |     |     |      |
 //                    | ALT |     | SPC |   | SPC |     | GUI |
       bindings = <
-   &kp TAB    &kp N1  &kp N2    &kp N3    &kp N4  &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &kp LSHFT  &kp N6  &kp N7    &kp N8    &kp N9  &kp N0         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LCTRL  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT      &trans   &trans   &trans &trans    &trans &trans
+   &kp TAB    &kp N1  &kp N2    &kp N3    &kp N4  &kp N5         &kp N6    &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+   &kp LSHFT  &kp N6  &kp N7    &kp N8    &kp N9  &kp N0         &kp LEFT  &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp LCTRL  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT      &trans    &trans   &trans &trans    &trans &trans
                                 &kp LALT  &trans  &kp SPACE      &kp SPACE &trans   &kp LGUI
       >;
     };
 
     raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
-// | SHFT |     |     |     |     |     |   |  -  |  =  |  ~  |  [  |  ]  |  `   |
-// | CTRL |     |     |     |     |     |   |  _  |  +  | "|" |  {  |  }  |  \   |
-//                    | ALT |     | SPC |   | ESC |     | 4th |
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL |
+// | SHFT |     |     |     |     |     |   |  -  |  =  |  ~  |  [  |  ]  |  `  |
+// | CTRL |     |     |     |     |     |   |  _  |  +  | "|" |  {  |  }  |  \  |
+//                    | ALT |     | SPC |   | ESC |     |     |
       bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp DEL
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp TILDE &kp LBKT &kp RBKT &kp GRAVE
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp PIPE  &kp LBRC &kp RBRC &kp BSLH
-                             &kp LALT &trans   &kp SPACE   &kp ESC &trans    &mo 4
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp PIPE  &kp LBRC &kp RBRC &lt 4 BSLH
+                             &kp LALT &trans   &kp SPACE   &kp ESC   &trans    &trans
       >;
     };
 
@@ -86,12 +90,12 @@
 // -----------------------------------------------------------------------------------------
 // |     |     |     |     |     |     |   |     |     |     |     |     |     |
 // |     |     |     |     |     |     |   | LFT | DWN | UP  | RGT |     |     |
-// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   |     |     |     |     |  \  |     |
 //                   |     |     |     |   |     |     |     |
       bindings = <
-   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans &trans
-   &trans &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans &trans
+   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans   &trans
+   &trans &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans   &trans
+   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &kp BLSH &trans
                         &trans &trans &trans    &trans   &trans   &trans
       >;
     };
