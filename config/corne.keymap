@@ -17,6 +17,7 @@
 
 &lt {
 	tapping-term-ms = <150>;
+	quick-tap-ms = <150>;
 };
 
 / {
@@ -67,7 +68,7 @@
       bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp DEL
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp TILDE &kp LBKT &kp RBKT &kp GRAVE
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp PIPE  &kp LBRC &kp RBRC &lt 4 BSLH
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp PIPE  &kp LBRC &kp RBRC &mo 4 // lt 4 BSLH
                              &kp LALT &trans   &kp SPACE   &kp ESC   &trans    &trans
       >;
     };
@@ -90,12 +91,12 @@
 // -----------------------------------------------------------------------------------------
 // |     |     |     |     |     |     |   |     |     |     |     |     |     |
 // |     |     |     |     |     |     |   | LFT | DWN | UP  | RGT |     |     |
-// |     |     |     |     |     |     |   |     |     |     |     |  \  |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
 //                   |     |     |     |   |     |     |     |
       bindings = <
    &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans   &trans
    &trans &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans   &trans
-   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &kp BLSH &trans
+   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans   &trans
                         &trans &trans &trans    &trans   &trans   &trans
       >;
     };
