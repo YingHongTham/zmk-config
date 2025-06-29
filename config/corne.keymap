@@ -62,15 +62,15 @@
 
     lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// | TAB  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | SHFT |  6  |  7  |  8  |  9  |  0  |   | LFT | DWN |  UP | RGT |     |      |
-// | CTRL |     | LFT | DWN | UP  | RGT |   |     |     |     |     |     |      |
+// | CTRL | ESC | LFT | DWN | UP  | RGT |   |     |     |     |     |     |      |
 //                    | ALT |     | SPC |   | SPC |     | GUI |
       bindings = <
-   &kp TAB    &kp N1  &kp N2    &kp N3    &kp N4  &kp N5         &kp N6    &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &kp LSHFT  &kp N6  &kp N7    &kp N8    &kp N9  &kp N0         &kp LEFT  &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LCTRL  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT      &trans    &trans   &trans &trans    &trans &trans
-                                &kp LALT  &trans  &kp SPACE      &kp SPACE &trans   &kp LGUI
+   &kp TAB   &kp N1  &kp N2    &kp N3    &kp N4  &kp N5         &kp N6    &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+   &kp LSHFT &kp N6  &kp N7    &kp N8    &kp N9  &kp N0         &kp LEFT  &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp LCTRL &kp ESC &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT      &trans    &trans   &trans &trans    &trans &trans
+                               &kp LALT  &trans  &kp SPACE      &kp SPACE &trans   &kp LGUI
       >;
     };
 
@@ -90,12 +90,12 @@
 
     tri_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB | F1  | F2  | F3  | F4  | F5  |   | BT1 | BT2 | BT3 | BT4 | BT5 |BLCLR|
+// |  TAB | F1  | F2  | F3  | F4  | F5  |   | BT1 | BT2 | BT3 | BT4 | BT5 | MB5 |
 // | SHFT | F6  | F7  | F8  | F9  | F10 |   | SCROLL LT,DOWN,UP,RT  | MB3 | MB4 |
 // | CTRL | F11 | F12 | F13 | F14 | F15 |   | MOUSE  LT,DOWN,UP,RT  | MB1 | MB2 |
 //                    | ALT |     | SPC |   | SPC |     | GUI |
       bindings = <
-   &kp TAB   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4 &bt BT_CLR
+   &kp TAB   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4 &mkp MB5
    &kp LSHFT &kp F6   &kp F7   &kp F8   &kp F9   &kp F10      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &mkp MB3     &mkp MB4
    &kp LCTRL &kp F11  &kp F12  &kp F13  &kp F14  &kp F15      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB1     &mkp MB2
                                 &kp LALT  &trans  &kp SPACE    &kp SPACE      &trans   &kp LGUI
@@ -104,14 +104,14 @@
 
     quad_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |BTCLR|
 // |     |     |     |     |     |     |   | LFT | DWN | UP  | RGT |     |     |
 // |     |     |     |     |     |     |   |     |     |     |     |     |     |
 //                   |     |     |     |   |     |     |     |
       bindings = <
-   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans   &trans
-   &trans &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans   &trans
-   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans   &trans
+   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans  &bt BT_CLR
+   &trans &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &trans
+   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans  &trans
                         &trans &trans &trans    &trans   &trans   &trans
       >;
     };
