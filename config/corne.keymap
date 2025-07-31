@@ -105,14 +105,14 @@
     quad_layer {
 // -----------------------------------------------------------------------------------------
 // |     |     |     |     |     |     |   |     |     |     |     |     |BTCLR|
-// |     |     |     |     |     |     |   | LFT | DWN | UP  | RGT |     |     |
+// | CAPS|     |     |     |     |     |   | LFT | DWN | UP  | RGT |     |     |
 // |     |     |     |     |     |     |   |     |     |     |     |     |     |
 //                   |     |     |     |   |     |     |     |
       bindings = <
-   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans  &bt BT_CLR
-   &trans &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &trans
-   &trans &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans  &trans
-                        &trans &trans &trans    &trans   &trans   &trans
+   &trans   &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans  &bt BT_CLR
+   &kp CAPS &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &trans
+   &trans   &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans  &trans
+                          &trans &trans &trans    &trans   &trans   &trans
       >;
     };
   };
